@@ -5,6 +5,7 @@
 ```bash
 # Install development environment
 apt-get update
+apt-get upgrade
 apt-get install python3-venv
 python3 -m venv .venv
 ```
