@@ -21,7 +21,7 @@ source .venv/bin/activate
 
 ```bash
 # Get libraries with
-pip freeze > requirements.txt
+(.py3)$ pip freeze > requirements.txt
 # install them using
 (.py3)$ pip install -r requirements.txt
 ```
