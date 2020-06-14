@@ -16,7 +16,7 @@ python3 -m venv .py3
 ### Load environment
 
 ```bash
-source .venv/bin/activate
+source .py3/bin/activate
 ```
 
 > All of the following commands must be execute after activating the virtual environment
