@@ -10,7 +10,7 @@ apt-get autoremove
 
 # Install development environment
 apt-get install python3-venv
-python3 -m venv .venv
+python3 -m venv .py3
 ```
 
 ### Load environment
