@@ -3,9 +3,12 @@
 ### Create environment
 
 ```bash
-# Install development environment
+# Update session
 apt-get update
 apt-get upgrade
+apt-get autoremove
+
+# Install development environment
 apt-get install python3-venv
 python3 -m venv .venv
 ```
