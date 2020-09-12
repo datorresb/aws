@@ -17,6 +17,7 @@ python3 -m venv .py3
 
 ```bash
 source .py3/bin/activate
+deactivate
 ```
 
 > All of the following commands must be execute after activating the virtual environment
@@ -37,7 +38,7 @@ Install
 (.py3)$ pip install -U -r requirements.txt
 ```
 
-Formatting
+Formatting PEP8
 ```
 (.py3)$ ./check_code.sh
 ```
