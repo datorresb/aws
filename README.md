@@ -31,7 +31,7 @@ deactivate
 # Local commands to connect, upload and download
 ssh -i "keypar.pem" ubuntu@DNS
 scp -i "keypar.pem" </path/to/file> ubuntu@DNS:/home/ubuntu
-pscp -i "keypar.pem"  <\path\to\jupyter\notebook\> <username>@<EC2IP>:</destination/path>
+pscp -i "keypar.pem"  </path/to/jupyter/notebook/> <username>@DNS:</destination/path>
 ```
 
 ### Prepare Notebooks on EC2 
