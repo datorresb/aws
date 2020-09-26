@@ -72,4 +72,19 @@ Formatting PEP8
 (py3)$ ./check_code.sh
 ```
 
+### PySpark
+
+Download the most stable http://spark.apache.org/downloads.html
+```bash
+sudo tar -xzf spark-2.4.7-bin-hadoop2.7.tgz
+sudo mv spark-2.4.7-bin-hadoop2.7 /opt/spark-2.4.7
+sudo ln -s /opt/spark-2.4.7 /opt/spark
+```
+Edit and add export lines
+```bash
+sudo nano ~/.bashrc
+--------------------------------
+export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$PATH
+```
 
