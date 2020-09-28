@@ -40,10 +40,13 @@ pscp -i "keypar.pem"  </path/to/virtual/file> ubuntu@DNS:</destination/local/pat
 # Get notebook with
 (py3)$ pip install wheel
 (py3)$ pip install notebook
-(py3)$ jupyter notebook --generate-config
+(py3)$ pip install jupyter_contrib_nbextensions
+(py3)$ pip isntall autopep8
+(py3)$ pip install jupytext 
 ```
 
 ```bash
+(py3)$ jupyter notebook --generate-config
 # modify jupyter_notebook_config.py
 (py3)$ nano /home/ubuntu/.jupyter/jupyter_notebook_config.py
 #c.NotebookApp.ip = 'localhost' -> c.NotebookApp.ip = '0.0.0.0'
@@ -76,9 +79,9 @@ Formatting PEP8
 
 Download the most stable http://spark.apache.org/downloads.html
 ```bash
-sudo tar -xzf spark-2.4.7-bin-hadoop2.7.tgz
-sudo mv spark-2.4.7-bin-hadoop2.7 /opt/spark-2.4.7
-sudo ln -s /opt/spark-2.4.7 /opt/spark
+sudo tar -xzf spark-3.0.1-bin-hadoop2.7.tgz
+sudo mv spark-3.0.1-bin-hadoop2.7 /opt/spark-3.0.1
+sudo ln -s /opt/spark-3.0.1 /opt/spark
 ```
 Edit and add export lines
 ```bash
@@ -86,5 +89,16 @@ sudo nano ~/.bashrc
 --------------------------------
 export SPARK_HOME=/opt/spark
 export PATH=$SPARK_HOME/bin:$PATH
+```
+
+
+On python 
+```bash
+pip install findspark
+--------------------------------
+import findspark
+findspark.init()
+# To verify the automatically detected location
+findspark.find()
 ```
 
