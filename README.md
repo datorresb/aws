@@ -51,10 +51,13 @@ pscp -i "keypar.pem"  </path/to/virtual/file> ubuntu@DNS:</destination/local/pat
 (py3)$ nano /home/ubuntu/.jupyter/jupyter_notebook_config.py
 #c.NotebookApp.ip = 'localhost' -> c.NotebookApp.ip = '0.0.0.0'
 ```
+
+Prepare kernel on notebook
 ```bash
 ipython kernel install --name "py3" --user
 ```
 
+Install dependencies
 ```bash
 # Get libraries with
 (py3)$ pip freeze > requirements.txt
