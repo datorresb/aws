@@ -68,6 +68,12 @@ Install dependencies
 (py3)$ pip install -r requirements.txt
 ```
 
+### Spyder
+```bash
+(py3)$ pip install spyder
+(py3)$ py3/bin/spyder3
+```
+
 ### Code Style
 
 Install
