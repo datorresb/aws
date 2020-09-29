@@ -88,6 +88,15 @@ Formatting PEP8
 
 ### PySpark
 
+Install Java
+```bash
+sudo apt install openjdk-8-jdk
+# check isntallation with
+java -version 
+```
+
+
+
 Download the most stable http://spark.apache.org/downloads.html
 ```bash
 sudo tar -xzf spark-3.0.1-bin-hadoop2.7.tgz
