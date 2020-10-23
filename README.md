@@ -136,7 +136,7 @@ findspark.find()
 from pyspark.sql import SQLContex, SparkSession
 spark_db = SparkSession.builder \
     .master('local') \
-    .appName('DB_ETL') \
+    .appName('APP') \
     .config('spark.executor.memory', '12gb') \
     .config("spark.cores.max", "10") \
     .config("spark.jars", "postgresql-42.2.18.jar") \
