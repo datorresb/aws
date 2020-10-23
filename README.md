@@ -111,6 +111,16 @@ export SPARK_HOME=/opt/spark
 export PATH=$SPARK_HOME/bin:$PATH
 ```
 
+Download the PostgreSQL JDBC Driver from https://jdbc.postgresql.org/download.html and copy to ```/opt/spark-3.0.1/jars/```
+
+Edit and add export lines
+```bash
+sudo nano ~/.bashrc
+--------------------------------
+export SPARK_HOME=/opt/spark
+export PATH=$SPARK_HOME/bin:$PATH
+export SPARK_CLASSPATH=/opt/spark/jars
+```
 
 On python 
 ```bash
@@ -118,7 +128,24 @@ pip install findspark
 --------------------------------
 import findspark
 findspark.init()
+
 # To verify the automatically detected location
 findspark.find()
+
+# Add postgresql to Session
+from pyspark.sql import SQLContex, SparkSession
+spark_db = SparkSession.builder \
+    .master('local') \
+    .appName('DB_ETL') \
+    .config('spark.executor.memory', '12gb') \
+    .config("spark.cores.max", "10") \
+    .config("spark.jars", "postgresql-42.2.18.jar") \
+    .getOrCreate()
+sc = spark_db.sparkContext
+sqlContext = SQLContext(sc)
+
+postgres_url="jdbc:postgresql://{host}:{port}/{db}?user={user}&password={password}"
+df_spark.write.jdbc(postgres_url, "table_name", mode="overwrite")
+df_sector.write.jdbc(postgres_url, "sector", mode="overwrite")
 ```
 
