@@ -41,7 +41,7 @@ pscp -i "keypar.pem"  </path/to/virtual/file> ubuntu@DNS:</destination/local/pat
 (py3)$ pip install wheel
 (py3)$ pip install notebook
 (py3)$ pip install jupyter_contrib_nbextensions
-(py3)$ pip isntall autopep8
+(py3)$ pip install autopep8
 (py3)$ pip install jupytext 
 
 ```
