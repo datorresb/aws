@@ -48,7 +48,8 @@ pscp -i "keypar.pem"  </path/to/virtual/file> ubuntu@DNS:</destination/local/pat
 
 Prepare kernel on notebook
 ```bash
-ipython kernel install --name "py3" --user
+pip install ipython
+ipython3 kernel install --name "py3" --user
 jupyter contrib nbextension install --user
 ```
 Prepare notebook ports
