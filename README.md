@@ -51,6 +51,8 @@ Prepare kernel on notebook
 pip install ipython
 ipython3 kernel install --name "py3" --user
 jupyter contrib nbextension install --user
+
+Check: /home/USER/.local/share/jupyter/kernels
 ```
 Prepare notebook ports
 ```bash
