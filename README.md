@@ -13,13 +13,13 @@ sudo apt-get autoremove
 sudo apt-get install python3-venv
 
 # Create environment
-python3 -m venv py3
+python3 -m venv venv
 ```
 
 ### Load environment
 
 ```bash
-source py3/bin/activate
+source venv/bin/activate
 deactivate
 ```
 
@@ -38,55 +38,55 @@ pscp -i "keypar.pem"  </path/to/virtual/file> ubuntu@DNS:</destination/local/pat
 
 ```bash
 # Get notebook with
-(py3)$ pip install wheel
-(py3)$ pip install notebook
-(py3)$ pip install jupyter_contrib_nbextensions
-(py3)$ pip install autopep8
-(py3)$ pip install jupytext 
+(venv)$ pip install wheel
+(venv)$ pip install notebook
+(venv)$ pip install jupyter_contrib_nbextensions
+(venv)$ pip install autopep8
+(venv)$ pip install jupytext 
 
 ```
 
 Prepare kernel on notebook
 ```bash
 pip install ipython
-ipython3 kernel install --name "py3" --user
+ipython3 kernel install --name "venv" --user
 jupyter contrib nbextension install --user
 
 Check: /home/USER/.local/share/jupyter/kernels
 ```
 Prepare notebook ports
 ```bash
-(py3)$ jupyter notebook --generate-config
+(venv)$ jupyter notebook --generate-config
 # modify jupyter_notebook_config.py
-(py3)$ nano /home/ubuntu/.jupyter/jupyter_notebook_config.py
+(venv)$ nano /home/ubuntu/.jupyter/jupyter_notebook_config.py
 #c.NotebookApp.ip = 'localhost' -> c.NotebookApp.ip = '0.0.0.0'
 ```
 
 Install dependencies
 ```bash
 # Get libraries with
-(py3)$ pip freeze > requirements.txt
+(venv)$ pip freeze > requirements.txt
 
 # install them using
-(py3)$ pip install -r requirements.txt
+(venv)$ pip install -r requirements.txt
 ```
 
 ### Spyder
 ```bash
-(py3)$ pip install spyder
-(py3)$ py3/bin/spyder3
+(venv)$ pip install spyder
+(venv)$ venv/bin/spyder3
 ```
 
 ### Code Style
 
 Install
 ```
-(py3)$ pip install -U -r requirements.txt
+(venv)$ pip install -U -r requirements.txt
 ```
 
 Formatting PEP8
 ```
-(py3)$ ./check_code.sh
+(venv)$ ./check_code.sh
 ```
 
 ### PySpark
