@@ -71,12 +71,6 @@ Install dependencies
 (venv)$ pip install -r requirements.txt
 ```
 
-### Spyder
-```bash
-(venv)$ pip install spyder
-(venv)$ venv/bin/spyder3
-```
-
 ### Code Style
 
 Install
